@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Dotz.Common.Util;
 
 namespace Dotz.WebApi
 {
@@ -12,6 +13,7 @@ namespace Dotz.WebApi
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UsePort()
                 .UseStartup<Startup>();
     }
 }
